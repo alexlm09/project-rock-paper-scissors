@@ -77,58 +77,63 @@ function getHumanChoice () {
   return numHumanResult;
 }
 
-function playRound () {
-  const humanChoice = getHumanChoice();
-  const computerChoice = getComputerChoice();
-
+function getWinner (humanChoice, computerChoice) {
   switch (humanChoice) {
     case 1:
       if (computerChoice === 1) {
         console.log("It's a draw!");
+        console.log(`Human: ${humanScore} - Computer ${computerScore}`);
 
       } else if (computerChoice === 2) {
         console.log("You lost...");
-        computerScore 
-        console.log(++computerScore);
+        console.log(`Human: ${humanScore} - Computer ${++computerScore}`);
 
       } else if (computerChoice === 3) {
         console.log("You won!");
-        console.log(++humanScore);
+        console.log(`Human: ${++humanScore} - Computer ${computerScore}`);
       }
-      return;
+      break;
 
     case 2:
       if (computerChoice === 1) {
         console.log("You won!");
-        console.log(++humanScore);
+        console.log(`Human: ${++humanScore} - Computer ${computerScore}`);
 
       } else if (computerChoice === 2) {
         console.log("It's a draw!");
+        console.log(`Human: ${humanScore} - Computer ${computerScore}`);
 
       } else if (computerChoice === 3) {
         console.log("You lost...");
-        console.log(++computerScore);
+        console.log(`Human: ${humanScore} - Computer ${++computerScore}`);
       }
-      return;
+      break;
 
     case 3:
       if (computerChoice === 1) {
         console.log("You lost...");
-        console.log(++computerScore);
+        console.log(`Human: ${humanScore} - Computer ${++computerScore}`);
 
       } else if (computerChoice === 2) {
         console.log("You won!");
-        console.log(++humanScore);
+        console.log(`Human: ${++humanScore} - Computer ${computerScore}`);
 
       } else if (computerChoice === 3) {
         console.log("It's a draw!");
+        console.log(`Human: ${humanScore} - Computer ${computerScore}`);
       }
   }
-
 }
 
-for (let i = 0; i < 4; i++) {
-  playRound()
+function playRound () {
+  const humanChoice = getHumanChoice();
+  const computerChoice = getComputerChoice();
+
+  console.log(`The human choice is ${humanChoice}`);
+  console.log(`The computer choice is ${computerChoice}`);
+
+  
+  
 
 }
 
