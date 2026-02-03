@@ -72,6 +72,8 @@ function getHumanChoice () {
 
   humanResult = humanResult.toLowerCase();
   let numHumanResult = playerChoiceToNum(humanResult);
+
+  return numHumanResult;
 }
 
 
