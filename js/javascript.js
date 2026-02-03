@@ -125,7 +125,7 @@ function getWinner (humanChoice, computerChoice) {
   }
 }
 
-function playRound (humanScore, computerScore) {
+function playRound () {
   const humanChoice = getHumanChoice();
   const computerChoice = getComputerChoice();
 
