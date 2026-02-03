@@ -1,5 +1,5 @@
-humanScore = 0;
-computerScore = 0;
+let computerScore = 0;
+let humanScore = 0;
 
 function randomNumber () {
   let result;
@@ -64,8 +64,6 @@ function getComputerChoice () {
   return computerResult;
 }
 
-console.log(getComputerChoice());
-
 function getHumanChoice () {
   let humanResult = prompt("Pick rock, paper or scissors:");
 
@@ -79,5 +77,58 @@ function getHumanChoice () {
   return numHumanResult;
 }
 
+function playRound () {
+  const humanChoice = getHumanChoice();
+  const computerChoice = getComputerChoice();
 
+  switch (humanChoice) {
+    case 1:
+      if (computerChoice === 1) {
+        console.log("It's a draw!");
+
+      } else if (computerChoice === 2) {
+        console.log("You lost...");
+        computerScore 
+        console.log(++computerScore);
+
+      } else if (computerChoice === 3) {
+        console.log("You won!");
+        console.log(++humanScore);
+      }
+      return;
+
+    case 2:
+      if (computerChoice === 1) {
+        console.log("You won!");
+        console.log(++humanScore);
+
+      } else if (computerChoice === 2) {
+        console.log("It's a draw!");
+
+      } else if (computerChoice === 3) {
+        console.log("You lost...");
+        console.log(++computerScore);
+      }
+      return;
+
+    case 3:
+      if (computerChoice === 1) {
+        console.log("You lost...");
+        console.log(++computerScore);
+
+      } else if (computerChoice === 2) {
+        console.log("You won!");
+        console.log(++humanScore);
+
+      } else if (computerChoice === 3) {
+        console.log("It's a draw!");
+      }
+  }
+
+}
+
+for (let i = 0; i < 4; i++) {
+  playRound()
+
+}
 
