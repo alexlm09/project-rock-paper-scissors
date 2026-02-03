@@ -125,7 +125,7 @@ function getWinner (humanChoice, computerChoice) {
   }
 }
 
-function playRound () {
+function playRound (humanScore, computerScore) {
   const humanChoice = getHumanChoice();
   const computerChoice = getComputerChoice();
 
@@ -136,4 +136,13 @@ function playRound () {
 
 }
 
+function playGame () {
 
+  for (let i = 1; i <= 5; i++) {
+    playRound();
+  }
+
+  console.log(`The final score is:\nHuman: ${humanScore} - Computer: ${computerScore}`);
+}
+
+playGame();
