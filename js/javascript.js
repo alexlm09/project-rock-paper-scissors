@@ -7,3 +7,22 @@ function randomNumber () {
   return result;
 }
 
+function getComputerChoice () {
+  let randomNum = randomNumber();
+  let computerResult;
+
+  switch (randomNum) {
+    case 1:
+      computerResult = "Rock";
+      break;
+    case 2:
+      computerResult = "Paper";
+      break;
+    case 3:
+      computerResult = "Scissors";
+  }
+
+  return computerResult;
+}
+
+
