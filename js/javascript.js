@@ -132,8 +132,8 @@ function playRound () {
   console.log(`The human choice is ${humanChoice}`);
   console.log(`The computer choice is ${computerChoice}`);
 
-  
-  
+  getWinner(humanChoice, computerChoice);
 
 }
+
 
