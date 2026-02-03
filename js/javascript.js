@@ -54,25 +54,25 @@ function playerChoiceToNum (choice) {
 
 function getComputerChoice () {
   let randomNum = randomNumber();
-  let computerResult;
+  let computerResult = randomNum;
 
-  switch (randomNum) {
-    case 1:
-      computerResult = "rock";
-      break;
-    case 2:
-      computerResult = "paper";
-      break;
-    case 3:
-      computerResult = "scissors";
-  }
+  //1 = rock || 2 = paper || 3 = scissors
 
   return computerResult;
 }
 
+console.log(getComputerChoice());
+
 function getHumanChoice () {
   let humanResult = prompt("Pick rock, paper or scissors:");
 
+  while (!checkIfValid(humanResult)) {
+    humanResult = prompt("Only Rock, Paper or Scissors al valid inputs:");
+  }
+
+  humanResult = humanResult.toLowerCase();
+  let numHumanResult = playerChoiceToNum(humanResult);
 }
+
 
 
