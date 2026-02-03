@@ -15,6 +15,19 @@ function checkPrompt (choice) {
   return false;
 }
 
+function checkIfValid(choice) {
+  if (!checkPrompt(choice)) {
+    return false;
+  }
+
+  let choiceLowerCase = choice.toLowerCase();
+
+  if (choiceLowerCase === "rock" || choiceLowerCase === "paper" || choiceLowerCase === "scissors") {
+    return true;
+  } else {
+    return false;
+  }
+}
 
 function playerChoiceToNum (choice) {
   if (choice) {
