@@ -7,22 +7,42 @@ function randomNumber () {
   return result;
 }
 
+function checkPrompt (choice) {
+  if (choice && isNaN(Number(choice))) {
+    return true;
+  }
+
+  return false;
+}
+
+
+function playerChoiceToNum (choice) {
+  if (choice) {
+
+  }
+}
+
 function getComputerChoice () {
   let randomNum = randomNumber();
   let computerResult;
 
   switch (randomNum) {
     case 1:
-      computerResult = "Rock";
+      computerResult = "rock";
       break;
     case 2:
-      computerResult = "Paper";
+      computerResult = "paper";
       break;
     case 3:
-      computerResult = "Scissors";
+      computerResult = "scissors";
   }
 
   return computerResult;
+}
+
+function getHumanChoice () {
+  let humanResult = prompt("Pick rock, paper or scissors:");
+
 }
 
 
