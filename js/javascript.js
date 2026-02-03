@@ -30,10 +30,27 @@ function checkIfValid(choice) {
 }
 
 function playerChoiceToNum (choice) {
-  if (choice) {
-
+  if (!checkIfValid(choice)) {
+    return 0;
   }
+  
+  let choiceLowerCase = choice.toLowerCase();
+  let resultNum;
+
+  switch (choiceLowerCase) {
+    case "rock":
+      resultNum = 1;
+      break;
+    case "paper":
+      resultNum = 2;
+      break;
+    case "scissors":
+      resultNum = 3;
+  }
+
+  return resultNum;
 }
+
 
 function getComputerChoice () {
   let randomNum = randomNumber();
