@@ -1,3 +1,6 @@
+humanScore = 0;
+computerScore = 0;
+
 function randomNumber () {
   let result;
   let minNumber = 1;
